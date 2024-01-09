@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/bootstrap-5.2.2-dist/css/bootstrap.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>Love Calculator</title>
+</head>
+<body>
+  <h1 class="text-center text-light">LOVE CALCULATOR</h1>
+  
+  <div class="container bg-info shadow-sm">
+    <div class="alert alert-danger p-2 text-center fw-bolder" style="display: none;" id="error">Pls Input Your Details</div>
+  <h5 class="name">YOUR NAME</h5>
+  <input class="form-control my-2 mx-3  py-3" type="text"id="input1">
+  <h5 class="name">PARTNER NAME</h5>
+    <input class="form-control my-2 mx-3 py-3" type="text"id="input2">
+    <button class="btn btn-lg btn-light mx-4 px-6 my-4  text-center fw-bolder" onclick="calculateLove()">Calculate Love</button>
+    <h4 style="margin: 20px;color:white;font-weight:bolder">Results:</h4>
+    <div id="disp"></div>
+  </div>
+    
+    <script>
+      //random matric numbers
+      //Math.random() - numbers between 1 and 0
+      function calculateLove(){
+        var randomNumber = Math.round(Math.random()*100);
+        if(input1.value,input2.value == ""){
+          error.style.display = "block"
+          
+        }else{
+          if(randomNumber <=25){
+            disp.innerHTML = `<h1 style="background-color:pink;border-radius:10px" class="text-center  border-5 py-2 mx-4 my-3">${randomNumber}%</h1>`
+          }else if(randomNumber >=25 && randomNumber <=50){
+            disp.innerHTML =`<h1 style="background-color:pink;border-radius:15px" class="text-center border-5 py-2 mx-4 my-4">${randomNumber}%</h1>`
+          }else if(randomNumber >=50 && randomNumber <=75){
+            disp.innerHTML =`<h1 style="background-color:pink;border-radius:15px" class="text-center border-5 py-2 mx-4 my-4">${randomNumber}%</h1>`
+          }else if(randomNumber >=75 && randomNumber <=100){
+            disp.innerHTML =`<h1 style="background-color:pink; border-radius:15px" class="text-center border-5 rounded py-2 mx-4 my-4">${randomNumber}%</h1>`
+          }
+        }
+        input1.value = "";
+        input2.value = "";  
+        
+      }         
+    </script>
+</body>
+</html>

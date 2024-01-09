@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: linear-gradient(45deg, rgb(163, 17, 95), #7156e9);
+}
+.container{
+    width: 50%;
+    height: 80vh;
+    background: linear-gradient(45deg, #08001f, #30197d);
+    animation:animate 5s linear infinite;
+}
+@keyframes animate {
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
+.name{
+    background-color: grey;
+    border: radius 15px;
+    color: black;
+    margin: 28px;
+    padding: 18px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-weight: bolder;
+}
+#input1,#input2{
+    width: 95%;
+}
+@media screen and (max-width:540px) {
+    .container{
+        width: 100%;
+        height: 100vh;
+        overflow-x: hidden;
+        border: 10px solid red;
+        border-radius: 50px;
+    }    
+    
+}
+
